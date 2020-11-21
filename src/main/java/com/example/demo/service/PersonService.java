@@ -16,25 +16,25 @@ import com.example.demo.repository.PersonRepository;
 @Service
 public class PersonService {
 	
-//	@Autowired
-//	private PersonRepository repository;
+	@Autowired
+	private PersonRepository repository;
 	
-//	@Autowired
-//	private CordinatesRepository crepository;
+	@Autowired
+	private CordinatesRepository crepository;
 	
 	
 	@Autowired
 	private CordinatesRepository cRepository;
 	
     public List<Person> findAll() {
-//        return (List<Person>) repository.findAll()
-    	return new ArrayList<Person>();
+        return (List<Person>) repository.findAll();
+//    	return new ArrayList<Person>();
     }
 
     
     public List<Coordinates> findAllC() {
-//        return (List<Coordinates>) crepository.findAll();
-    	return new ArrayList<Coordinates>();
+        return (List<Coordinates>) crepository.findAll();
+//    	return new ArrayList<Coordinates>();
     }
     
     public Person addPerson() {
@@ -71,8 +71,8 @@ public class PersonService {
        Coordinates c= new Coordinates();
 	   c.setLocation(new Point(-73.9667, 40.78));
 //	   c.setLocations(Arrays.asList(new Point(-73.9667, 40.78), new Point(73.9667, 40.78)));
-//       cRepository.save(c);
-	   return p;
-//       return repository.save(p);
+       cRepository.save(c);
+//	   return p;
+       return repository.save(p);
     }
 }
