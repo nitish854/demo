@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.example.demo.entity.Person;
 
-@Repository
-public interface PersonRepository extends CrudRepository<Person, String>{
+//@Repository
+public interface PersonRepository {
 
 }
