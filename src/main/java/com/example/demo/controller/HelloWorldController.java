@@ -22,6 +22,10 @@ public class HelloWorldController {
 	@Autowired
 	PersonService personService;
 
+	static {
+		System.out.println("static message");
+	}
+	
     private static final String MESSAGE_FORMAT = "Hello %s!";
 
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
